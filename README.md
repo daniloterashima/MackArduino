@@ -1,7 +1,7 @@
 # MackArduino
-##i)         Uma breve descrição do funcionamento e uso para quem quiser reproduzir.
+# i)         Uma breve descrição do funcionamento e uso para quem quiser reproduzir.
 ###. Meu objetivo neste artigo é trazer a forma mais simples de automação utilizando Arduíno, que permitirá o reconhecimento de oscilações de ruído para acionar leds automaticamente.
-##ii)       O software desenvolvido e a documentação de código.
+# ii)       O software desenvolvido e a documentação de código.
 ###//DANILO MASSANORI TERASHIMA DA SILVA
 //MACKENZIE - 21015775
 //ANALISE E DESENVOLVIMENTO DE SISTEMAS
@@ -40,8 +40,8 @@ void loop() {
 }
 
 
-##iii)      A descrição do hardware utilizado (plataformas de desenvolvimento, sensores, atuadores, impressão 3D de peças, medidas de peças e caixas etc.)
+# iii)      A descrição do hardware utilizado (plataformas de desenvolvimento, sensores, atuadores, impressão 3D de peças, medidas de peças e caixas etc.)
 ## Hardware
 ##Placa Wifi Esp32 Doit Devkit Esp32-wroom-32, Sensor de SOM, Mini Protoboard 170 pontos, 20 Jumpers, Bateria 9 volts, Clip bateria, Resistores 10k, Leds verdes e vermelhos 
-##iv)      A documentação das interfaces, protocolos e módulos de comunicação.
+## iv)      A documentação das interfaces, protocolos e módulos de comunicação.
 Utilização do Protocolo MQQT com o broker HiveMQ.
