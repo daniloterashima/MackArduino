@@ -1,0 +1,39 @@
+//DANILO MASSANORI TERASHIMA DA SILVA
+//MACKENZIE - 21015775
+//ANALISE E DESENVOLVIMENTO DE SISTEMAS
+
+
+int sensorPin = 14;     // Pino do sensor de palmas (conecte ao pino digital 2)
+int ledPin = 17;       // Pino do LED (conecte ao pino digital 13)
+int contadorPalmas = 0;
+int palmaAnterior = 0;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);        // Define o pino do LED como saída
+  pinMode(sensorPin, INPUT);      // Define o pino do sensor como entrada
+  Serial.begin(9600);             // Inicializa a comunicação serial (opcional)
+}
+
+void loop() {
+  int palmaAtual = digitalRead(sensorPin);  // Lê o valor do sensor de palmas
+  
+  if (palmaAtual == HIGH && palmaAnterior == LOW) {
+    // Palma detectada
+    contadorPalmas++;
+    delay(1000);  // Aguarda um curto intervalo para evitar detecção de múltiplas palmas
+    
+    if (contadorPalmas == 1) {
+      digitalWrite(ledPin, HIGH);  // Acende o LED
+      Serial.println("Luz acesa"); // Imprime no monitor serial (opcional)
+    } else if (contadorPalmas == 2) {
+      digitalWrite(ledPin, LOW);   // Apaga o LED
+      Serial.println("Luz apagada"); // Imprime no monitor serial (opcional)
+      contadorPalmas = 0;           // Reinicia o contador de palmas
+    }
+  }
+  
+  palmaAnterior = palmaAtual;   // Atualiza o valor anterior do sensor
+}
+
+
+https://github.com/daniloterashima/MackArduino.git
